@@ -75,7 +75,7 @@ def deploy(environment) {
 
 def runUnittests() {
     sh "pip install -r section_4/code/cd_pipeline/requirements.txt"
-	sh "python3 section_4/code/cd_pipeline/tests/test_flask_app.py"
+	sh "python section_4/code/cd_pipeline/tests/test_flask_app.py"
 }
 
 
