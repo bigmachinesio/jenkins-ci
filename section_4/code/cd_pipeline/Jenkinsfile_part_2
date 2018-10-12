@@ -8,7 +8,7 @@ pipeline {
 	}
 
 	environment {
-		PYTHONPATH = "${WORKSPACE}/section_4/code/cd_pipeline"
+		PYTHONPATH = "${WORKSPACE}/section_4/code/cd_pipeline:.local/lib/python2.7/site-packages/flask"
 	}
 
 	stages {
@@ -74,7 +74,7 @@ def deploy(environment) {
 
 
 def runUnittests() {
-    sh "pip install -r section_4/code/cd_pipeline/requirements.txt"
+        sh "pip install -r section_4/code/cd_pipeline/requirements.txt"
 	sh "python section_4/code/cd_pipeline/tests/test_flask_app.py"
 }
 
